@@ -1,0 +1,102 @@
+<html data-theme="light">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <title>The Steamed Gourmet - A Continental Restaurant</title>
+    <link rel="stylesheet" href="/css/guest/style.css">
+</head>
+<body>
+    <div class="container">
+        <%- include('../partials/navbar.ejs') %> 
+            <div id="side-menu" class="side-menu">
+            <div class="side-top-bar flex">
+                <i id="close-menu" class="fas fa-times"></i>
+                <div class="title">The Steamed Gourmet</div>
+                <button onclick="redirect('/signup')" id="signup-link" class="login">Login/Register
+                </button>
+            </div>
+        </div>
+
+        <header class="flex-center">
+            <span class="head-text">Welcome to <span>The Steaming Gourmet</span></span>
+            <button onclick="redirect('#food-items')">Order Now</button>
+        </header>
+    </div>
+
+    <div id="food-items" class="food-items">
+        <h1 class="roboto">Our Specialities</h1>
+
+        <div class="food-wrapper flex">
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/tandoori.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>tandoori chicken</strong>
+                    <span>Rs. 1200</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/tikka.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>chicken tikka</strong>
+                    <span>Rs. 1200</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/mutton_seekh_kabab.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>Mutton seekh kabab</strong>
+                    <span>Rs. 1400</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/mutton_biryani.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>Mutton Biryani</strong>
+                    <span>Rs. 1500</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/fish_tikka.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>Fish tikka</strong>
+                    <span>Rs. 1800</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+
+            <div class="items">
+                <div class="item-img">
+                    <img src="/images/afghani_chicken.jpg" alt="">
+                </div>
+                <div class="item-details">
+                    <strong>Afghani Chicken</strong>
+                    <span>Rs. 1200</span>
+                    <button>Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            The Steam Gourmet &copy; || All Rights Reserved
+        </footer>
+    </div>
+    <script src="/js/index.js"></script>
+</body>
+</html>

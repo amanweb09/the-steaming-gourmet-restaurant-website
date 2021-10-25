@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <%- include('./head.ejs') %>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --primary-dark: #59253a;
+                --primary-light: #78244c;
+                --fade: #895061;
+                --light-blue: #0677a1;
+                --dark-blue: #2d4159;
+            }
+
+            nav {
+                width: 100%;
+                height: 14vh;
+                background: var(--primary-light);
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            div.bars {
+                width: 5rem;
+                height: 8vh;
+                border: 2px solid wheat;
+                flex-direction: column;
+                cursor: pointer;
+            }
+
+            div.bars .bar {
+                width: 2rem;
+                height: 5px;
+                border-radius: 3px;
+                background: #fff;
+            }
+
+            div.bar#bar1 {
+                transform: translateY(-10px);
+            }
+
+            div.bar#bar3 {
+                transform: translateY(10px);
+            }
+
+            div.logo {
+                font-family: 'Dancing Script', cursive;
+                color: #fff;
+                font-size: 2rem;
+            }
+
+            div.cart {
+                color: #fff;
+                font-size: 2rem;
+                padding-right: 1rem;
+                cursor: pointer;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .roboto {
+                font-family: "Roboto";
+            }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar flex">
+        <div class="ham">
+            <div id="hambar" class="bars flex-center">
+                <div class="bar" id="bar1"></div>
+                <div class="bar" id="bar2"></div>
+                <div class="bar" id="bar3"></div>
+            </div>
+        </div>
+        <div class="logo">The Steaming Gourmet</div>
+        <div class="cart"><i class="fab fa-opencart"></i></div>
+    </nav>
+</body>
+
+</html>

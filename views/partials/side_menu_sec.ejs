@@ -1,0 +1,95 @@
+<html>
+
+<head>
+    <%- include('./head.ejs') %>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            :root {
+                --primary-dark: #59253a;
+                --primary-light: #78244c;
+                --fade: #895061;
+                --light-blue: #0677a1;
+                --dark-blue: #2d4159;
+            }
+
+            nav {
+                width: 100vw;
+                height: 14vh;
+                background: var(--primary-light);
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            div.ham {
+                width: 5rem;
+                height: 8vh;
+                border: 2px solid wheat;
+                cursor: pointer;
+            }
+            div.ham i {
+                font-size: 2.2rem;
+                color: #fff;
+            }
+
+            div.logo {
+                font-family: 'Dancing Script', cursive;
+                color: #fff;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+
+            div.cart {
+                color: #fff;
+                font-size: 2rem;
+                padding-right: 1rem;
+                cursor: pointer;
+            }
+
+            .flex {
+                display: flex;
+            }
+
+            .flex-center {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .roboto {
+                font-family: "Roboto";
+            }
+        </style>
+</head>
+
+<body>
+    <nav class="navbar flex">
+        <div class="ham flex-center">
+            <i id="back-icon" class="fas fa-arrow-left"></i>
+        </div>
+        <div id="logo-prim" class="logo">The Steaming Gourmet</div>
+        <div class="cart"><i id="cart-icon" class="fab fa-opencart"></i></div>
+    </nav>
+
+    <script>
+        const backicon = document.getElementById('back-icon');
+        const logo = document.getElementById('logo-prim');
+        const cart = document.getElementById('cart-icon');
+
+        backicon.addEventListener('click', () => {
+            window.history.back()
+        })
+        logo.addEventListener('click', () => {
+            window.location.href = '/'
+        })
+        cart.addEventListener('click', () => {
+            window.location.href = '/cart'
+        })
+    </script>
+</body>
+
+</html>
